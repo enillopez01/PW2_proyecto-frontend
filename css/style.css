@@ -1,10 +1,11 @@
 * {
     box-sizing: border-box
 }
-html{
-background-color: #e5e5f7;
-/*opacity: 0.6;*/
-background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 6px ), repeating-linear-gradient( #adcfe555, #adcfe5 );
+
+.html {
+    background-color: #e5e5f7;
+    /*opacity: 0.6;*/
+    background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #e5e5f7 6px), repeating-linear-gradient(#adcfe555, #adcfe5);
 }
 
 .center {
@@ -303,11 +304,13 @@ img {
 
 .body_3 {
     text-align: center;
-    margin: 0 auto;
-    font-size: 20px;
+    position: relative;
+    /*margin: 0 auto;*/
+    /*font-size: 20px;*/
     border-radius: 15px;
     background-color: #97afca;
-    height: 200px
+    height: 200px;
+    bottom: 0;
 }
 
 .first_row {
@@ -453,7 +456,7 @@ p {
 
 /* Style login/signup form*/
 
-main{
+main {
     margin: 0;
     font-family: 'Exo2', sans-serif;
     display: flex;
@@ -467,7 +470,7 @@ main{
 
 }
 
-main p{
+main p {
     text-align: left;
 }
 
@@ -484,7 +487,7 @@ form {
     gap: 10px;
 }
 
-form p{
+form p {
     text-align: center;
 }
 
@@ -493,38 +496,37 @@ button {
     border-radius: 5px;
     border: unset;
     padding: 15px 30px;
-    font-size: larger;
+    font-size: large;
 }
 
-button{
+button {
     background-color: #395a7f;
     color: white;
     font-weight: bolder;
     cursor: pointer;
 }
 
-.error{
+.error {
     color: red;
     font-weight: 600;
 }
 
-.hidden{
+.hidden {
     display: none;
 }
 
 .h-link:link,
-.h-link:visited
-{
+.h-link:visited {
     text-decoration: none;
     background-color: #395a7f;
     color: white;
     font-weight: 500;
     padding: 14px 25px;
-    display:inline-block;
+    display: inline-block;
     border-radius: 15px;
 }
 
-.h-link:hover{
+.h-link:hover {
     background-color: #97afca;
     color: white;
     font-weight: 600;
@@ -552,29 +554,134 @@ button{
     }
 }
 
+.footer-web {
+    margin: 0 auto;
+    background-color: #395a7f;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 99.99%;
+    border-radius: 15px;
+
+}
+
 .l-footer {
+    background-color: #395a7f;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/*.l-footer {
     background: #395a7f;
     position: relative;
     padding-top: 50px;
     padding-bottom: 50px
+}*/
+
+
+/* CSS Contact Form*/
+
+.contact-form-main {
+    margin: 0;
+    font-family: 'Exo2', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 75svh;
+    font-size: larger;
+    background-image: url("https://c.pxhere.com/photos/ef/ba/car_blue_vintage_mexico_old-49516.jpg!d");
+    background-repeat: no-repeat;
+    background-position: center;
+
 }
 
-.lfooter_wrapper {
+.form2-container {
+    width: 500px;
+    background-color: #9fc8f7c2;
+    border-radius: 15px;
+    padding: 45px;
+
+}
+
+
+/* CSS Dashboard*/
+/* Estilos globales */
+.body-dash {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* Estilos del encabezado */
+.header-dash {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilos del menú lateral */
+.sidebar-dashb {
+    background-color: #292929;
+    color: #fff;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-top: 60px;
+    /* Para evitar que el contenido del sidebar se superponga con el encabezado */
+}
+
+.sidebar-dashb ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-dashb ul li {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+}
+
+.sidebar-dashb ul li:hover {
+    background-color: #395a7f;
+}
+
+.sidebar-dashb ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Estilos del contenido principal */
+.content-header-dash {
+    margin-left: 250px;
+    /* Ancho del sidebar */
+    padding: 20px;
+}
+
+/* Estilos del footer */
+.footer-dash {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
     width: 100%;
-    max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px
 }
 
-
-
-
-/* Responsive screen */
-@media (min-width:768px) {
-    .l-footer_info {
-        display: flex;
-        flex-wrap: wrap
-    }
+.btn_logout {
+    border-radius: 5px;
+    border: unset;
+    padding: 7px 14px;
+    font-size: smaller;
+    align-content: center;
 }

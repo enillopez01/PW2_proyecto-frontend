@@ -3,7 +3,7 @@
 Luis Edgardo Cruz Diaz
 Enil Enrique Lopez Cruz     2016-1007-0128
 -->
-<html lang="en">
+<html lang="en" class="html">
 
 <head>
 
@@ -66,25 +66,25 @@ Enil Enrique Lopez Cruz     2016-1007-0128
 
     </div><!--Cuerpo -->
 
-
+    <br>
     <div class="contact-form-main">
-        <div class="form-container2">
-            <form id="contact-form" method="post" enctype="multipart/form-data">
-                <label for="fullname" class="">Full Name</label>
+        <div class="form2-container">
+            <h2>Contact us!!</h2>
+            <form action="/uploadform" id="contact-form" method="post" enctype="multipart/form-data">
+                <label for="fullname" class="sr-only">Full Name</label>
                 <input type="text" name="fullname" id="fullname" placeholder="Full Name" required>
 
-                <label for="email" class="">Email</label>
+                <label for="email" class="sr-only">Email</label>
                 <input type="email" name="email" id="email" placeholder="Email" required>
 
-                <label for="phone" class="">Email</label>
+                <label for="phone" class="sr-only">Email</label>
                 <input type="tel" name="phone" id="phone" placeholder="Phone Number" required>
 
-                <label for="upimage" class="">Upload Image</label>
-                <input type="file" name="upimage" id="upimage" accept="image/*">
+                <label for="imagefile" class="sr-only">Upload Image</label>
+                <input type="file" name="imagefile" id="imagefile" accept="image/*">
 
-                <label for="msg" class=""></label>
+                <label for="msg" class="sr-only"></label>
                 <textarea name="msg" id="msg" cols="30" rows="10" maxlength="300" placeholder="Message"></textarea>
-                <input type="text" name="msg" id="msg" placeholder="Message">
                 <br>
                 <button type="submit">Submit</button>
                 <button type="reset">Clear</button>
@@ -95,9 +95,11 @@ Enil Enrique Lopez Cruz     2016-1007-0128
     </div>
     <br>
 
-    <div class="body_3"></div>
 </body>
-<footer>
+<br><br>
+<!--Pie -->
+<footer class="footer-web">
+    <p>Copyright - © 2024</p>
 </footer>
 <!-- JS Scripts-->
 <script src="/js/resp_menu.js"></script>
