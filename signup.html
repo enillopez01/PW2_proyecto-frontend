@@ -16,20 +16,15 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Lora:ital@0;1&family=Playpen+Sans:wght@100;400;600&display=swap"
         rel="stylesheet">
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
 </head>
 
 <body> <!--Encabezado-->
     <header class="header">
         <div class="left_col"></div>
-
         <div class="mid_col">
-
             <img src="https://images-platform.99static.com//SppyZz2DLW1LLqG1QS5Lneoh6ek=/0x0:2000x2000/fit-in/500x500/99designs-contests-attachments/134/134042/attachment_134042462"
                 type="img/jpg" alt="logo" width="175px" height="200px" class="center">
-
         </div>
-
         <div class="rigth_col">
             <a href="https://www.facebook.com/" target="_blank" rel="noopener" title="facebook"><i
                     class="fa fa-facebook-f fa-2x"></i></a>
@@ -43,15 +38,10 @@
     </header>
     <!--Boton para volver arriba-->
     <button onclick="topFunction()" id="btn_top" title="Go to top">Top</button>
-
     <!-- Cuerpo-->
     <div class="body_1">
-
-
         <div class="head">
-            <h1>
-                <a href="/index.html" target="_self">Classics Cars Club</a>
-            </h1>
+            <h1><a href="/index.html" target="_self">Classics Cars Club</a></h1>
             <!-- Menu-->
             <div class="menu" id="menu">
                 <a href="/index.html" target="_parent">Home</a>
@@ -63,7 +53,6 @@
                     <i class="fa fa-bars"></i></a>
             </div><!--Fin Menu-->
         </div>
-
         <br>
         <main>
             <div class="form-container">
@@ -71,11 +60,14 @@
                 <p>Enter your credentials</p>
                 <form id="signup-form">
                     <label for="name" class="sr-only">name</label>
-                    <input type="text" name="name" iN="name" placeholder="Name" required>
+                    <input type="text" name="name" id="name" placeholder="Name" required>
                     <label for="surname" class="sr-only">surname</label>
                     <input type="text" name="surname" id="surname" placeholder="Surname" required>
                     <label for="gender" class="sr-only">gender</label>
-                    <input type="text" name="gender" id="gender" placeholder="Gender" required>
+                    <select name="gender" id="gender">
+                        <option label="Male" value="Male"></option>
+                        <option label="Female" value="Female"></option>
+                    </select>
                     <label for="phone" class="sr-only">phone</label>
                     <input type="tel" name="phone" id="phone" placeholder="Phone" required>
                     <label for="email" class="sr-only">Email</label>
@@ -83,7 +75,7 @@
                     <label for="password" class="sr-only">Password</label>
                     <input type="password" name="password" id="password" placeholder="Password" required>
                     <button type="submit">Sign Up</button>
-                    <p class="error hidden">User or Password Incorrect</p>
+                    <div id="error-container"></div>
                 </form>
                 <br>
                 <a class="h-link" href="/login.html">Log In</a>
@@ -99,5 +91,6 @@
 <!-- JS Scripts-->
 <script src="/js/resp_menu.js"></script>
 <script src="/js/top_buttom.js"></script>
+<script src="/js/signup.js"></script>
 
 </html>

@@ -24,6 +24,7 @@
 
     <div class="sidebar-dashb">
         <ul>
+            <li><a href="/index.html" target="_blank">Home</a></li>
             <li><a href="/admin/dashb.html" target="_self">Users</a></li>
             <li><a href="/admin/messages.html" target="_self">Messages</a></li>
             <li><button id="btn_logout" class="btn_logout">Log out</button></li>
@@ -31,31 +32,41 @@
     </div>
 
     <div class="content-header-dash">
-        <h2>Classic Cars Club Admin Dashboard </h2>
-        <h3>Registered Users</h3>
+        <h2 id="tbl-header">Classic Cars Club Admin Dashboard </h2>
+        <h3 id="tbl-sheader">Registered Users</h3>
     </div>
     <div class="tbl1-container">
-        <table class="tbl-users" border="1">
+        <table id="tbl-users">
             <thead>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Surname</th>
-                <th>Phone</th>
-                <th>Email</th>
-                <th>Password</th>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Gender</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                </tr>
             </thead>
             <tbody>
-                <tr></tr>
+
             </tbody>
         </table>
     </div>
 
+    <div>
+        <br><br><br><br><br><br><br><br><br><br>
+    </div>
+
+    
+    <footer class="footer-dash">
+        <p>Copyrights - © 2024</p>
+    </footer>
 </body>
-<footer class="footer-dash">
-    <p>Copyrights - © 2024</p>
-</footer>
 
 <!--Scripts JS-->
 <script src="/js/logout.js"></script>
+<script src="/js/loadusers.js"></script>
 
 </html>

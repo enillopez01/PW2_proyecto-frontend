@@ -130,7 +130,8 @@ section {
     padding: 7px 7px
 }
 
-.menu a.login {
+.menu a.login,
+menu p {
     float: right;
     display: block;
     padding: 7px 7px
@@ -492,7 +493,8 @@ form p {
 }
 
 input,
-button {
+button,
+select {
     border-radius: 5px;
     border: unset;
     padding: 15px 30px;
@@ -606,25 +608,32 @@ button {
     background-color: #9fc8f7c2;
     border-radius: 15px;
     padding: 45px;
+}
 
+#error-container {
+    color: rgb(255, 1, 1);
+    font-weight: 500;
 }
 
 
 /* CSS Dashboard*/
-/* Estilos globales */
 .body-dash {
-    font-family: Arial, sans-serif;
+    font-family: 'Exo-2', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
 }
 
 /* Estilos del encabezado */
 .header-dash {
     background-color: #333;
+    width: 100%;
     color: #fff;
     padding: 20px;
     text-align: center;
+}
+
+.header-dash ul.li{
+    display: flex;
 }
 
 /* Estilos del menú lateral */
@@ -661,21 +670,99 @@ button {
 }
 
 /* Estilos del contenido principal */
-.content-header-dash {
+.content-header-dash,
+.tbl1-container {
     margin-left: 250px;
     /* Ancho del sidebar */
     padding: 20px;
+}
+
+/* Estilo Tabla*/
+
+#tbl-header {
+    font-family: 'Exo-2', sans-serif;
+    font-weight: bold;
+    font-size: 3.6em;
+    line-height: 1.7em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#tbl-sheader {
+    font-family: 'Exo-2', sans-serif;
+    font-weight: bold;
+    font-size: 1.6em;
+    line-height: 1.7em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#tbl-container {
+    display: block;
+    width: 850px;
+    background: #fff;
+    margin: 0 auto;
+    padding: 10px 17px;
+}
+
+#tbl-users {
+    margin: 0 auto;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+
+}
+
+#tbl-users thead {
+    cursor: pointer;
+    background: #c9dff0;
+}
+
+#tbl-users thead tr th {
+    font-weight: bold;
+    padding: 12px 30px;
+    padding-left: 42px;
+}
+
+#tbl-users th span {
+    padding-right: 20px;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+}
+
+#tbl-users thead tr th.headerSortUp,
+#keywords thead tr th.headerSortDown {
+    background: #acc8dd;
+}
+
+#tbl-users thead tr th.headerSortUp span {
+    background-image: url('https://i.imgur.com/SP99ZPJ.png');
+}
+
+#tbl-users thead tr th.headerSortDown span {
+    background-image: url('https://i.imgur.com/RkA9MBo.png');
+}
+
+
+#tbl-users tbody tr {
+    color: #555;
+}
+
+#tbl-users tbody tr td {
+    text-align: center;
+    padding: 15px 10px;
+}
+
+#tbl-users tbody tr td.lalign {
+    text-align: left;
 }
 
 /* Estilos del footer */
 .footer-dash {
     background-color: #333;
     color: #fff;
-    padding: 10px;
     text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    width: auto;
+    padding: 10px;
 }
 
 .btn_logout {
@@ -685,3 +772,110 @@ button {
     font-size: smaller;
     align-content: center;
 }
+
+/* Style for userForm page*/
+
+.userform-main {
+    min-height: 75svh;
+    font-size: larger;
+    padding-left: 60vmin;
+    padding-right: 30vmin;
+
+}
+
+.form3-container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+
+}
+
+.form3-container input[type=text]:focus {
+    border: 3px solid #29415c;
+}
+
+.form3-container input[type=email]:focus {
+    border: 3px solid #29415c;
+}
+
+#btn-userform {
+    border-radius: 5px;
+    border: unset;
+    padding: 7px 14px;
+    font-size: smaller;
+    align-content: center;
+}
+
+.form3-btn {
+    border-radius: 5px;
+    border: unset;
+    padding: 15px 30px;
+    font-size: large;
+    background-color: #395a7f;
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 160px;
+    height: 60px;
+
+
+}
+
+.button-container {
+    display: flex;
+    margin: 15px;
+    cursor: pointer;
+    border: unset;
+    font-weight: bolder;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 160px;
+    height: 60px;
+}
+
+.data-container {
+    padding-left: 300px;
+    padding-top: 20px;
+    padding-right: 150px;
+
+}
+
+.pagination-container {
+    padding-left: 300px;
+    padding-top: 20px;
+    padding-right: 150px;
+}
+
+.tbl-pagination {
+    padding: 0 auto;
+    font-size: medium;
+}
+
+.tbl-2 {
+    padding-left: 300px;
+    padding-top: 20px;
+    padding-right: 150px;
+}
+
+.tbl-pagina {
+    width: 80%;
+
+}
+
+.tbl-pagina td,
+th {
+    padding: 0.4rem !important;
+
+}
+
+/*
+.tbl-pagina tbody tr td.lalign {
+    text-align: left;
+}
+
+.tbl-pagina tbody tr td {
+    text-align: center;
+    padding: 15px 10px;
+}*/

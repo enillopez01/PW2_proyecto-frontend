@@ -70,7 +70,7 @@ Enil Enrique Lopez Cruz     2016-1007-0128
     <div class="contact-form-main">
         <div class="form2-container">
             <h2>Contact us!!</h2>
-            <form action="/uploadform" id="contact-form" method="post" enctype="multipart/form-data">
+            <form id="contact-form" enctype="multipart/form-data">
                 <label for="fullname" class="sr-only">Full Name</label>
                 <input type="text" name="fullname" id="fullname" placeholder="Full Name" required>
 
@@ -81,26 +81,27 @@ Enil Enrique Lopez Cruz     2016-1007-0128
                 <input type="tel" name="phone" id="phone" placeholder="Phone Number" required>
 
                 <label for="imagefile" class="sr-only">Upload Image</label>
-                <input type="file" name="imagefile" id="imagefile" accept="image/*">
+                <input type="file" name="imagefile" id="imagefile" accept="image/*" required>
 
                 <label for="msg" class="sr-only"></label>
-                <textarea name="msg" id="msg" cols="30" rows="10" maxlength="300" placeholder="Message"></textarea>
+                <textarea name="msg" id="msg" cols="30" rows="10" maxlength="600" placeholder="Message"></textarea>
                 <br>
                 <button type="submit">Submit</button>
-                <button type="reset">Clear</button>
-
+                <div id="status-container"></div>
             </form>
             <div id="message"></div>
         </div>
     </div>
     <br>
 
+
+    <footer class="footer-web">
+        <p>Copyright - © 2024</p>
+    </footer>
 </body>
 <br><br>
 <!--Pie -->
-<footer class="footer-web">
-    <p>Copyright - © 2024</p>
-</footer>
+
 <!-- JS Scripts-->
 <script src="/js/resp_menu.js"></script>
 <script src="/js/top_buttom.js"></script>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Proyecto Web II">
+    <meta name="author" content="Grupo #7">
+    <meta name="keywords" content="proyecto web ii">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registered Users</title>
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="icon" type="img/png" href="/img/classic-car-and-dealer-logo-vector.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="body-dash">
+    <header class="header-dash">
+        <h1>Dashboard</h1>
+    </header>
+
+    <nav class="sidebar-dashb">
+        <ul>
+            <li><a href="/index.html" target="_blank">Home</a></li>
+            <li><a href="/admin/dashb.html" target="_self">Users</a></li>
+            <li><a href="/admin/messages.html" target="_self">Messages</a></li>
+            <li><button id="btn_logout" class="btn_logout">Log out</button></li>
+        </ul>
+    </nav>
+
+    <div class="content-header-dash">
+        <h2 id="tbl-header">Classic Cars Club Admin Dashboard </h2>
+        <h3 id="tbl-sheader">Users</h3>
+    </div>
+
+    <div class="userform-main">
+        <div class="form3-container">
+            <form action="" id="form3-users">
+                <br>
+                <label for="ID" class="sr-only">ID:</label>
+                <input type="text" id="ID" name="ID" placeholder="ID" disabled>
+
+                <label for="name" class="sr-only">Name</label>
+                <input type="text" id="name" name="name" placeholder="Name" required>
+
+                <label for="surname" class="sr-only">Surname</label>
+                <input type="text" id="surname" name="surname" placeholder="Surname" required>
+
+                <label for="gender" class="sr-only">Gender</label>
+                <select id="gender" name="gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+
+                <label for="phone" class="sr-only">Phone</label>
+                <input type="text" id="phone" name="phone" placeholder="Phone" required>
+
+                <label for="email" class="sr-only">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                
+                <div class="button-container">
+                    <button class="form3-btn" type="submit">Submit</button>
+                    <a href="/admin/dashb.html"><button class="form3-btn" type="button">Cancel</button></a>
+                </div>
+                <br>
+                <div id="error-container"></div>
+
+            </form>
+
+        </div>
+    </div>
+    <div<br><br><br><br><br></div>
+
+        <footer class="footer-dash">
+            <p>Copyrights - © 2024</p>
+        </footer>
+</body>
+
+
+<!--Scripts JS-->
+<script src="/js/logout.js"></script>
+<script src="/js/userForm.js"></script>
+
+</html>
