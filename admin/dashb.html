@@ -2,13 +2,12 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="description" content="Proyecto Web II">
     <meta name="author" content="Grupo #7">
     <meta name="keywords" content="proyecto web ii">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registered Users</title>
+    <title>Messages Clients</title>
     <link rel="stylesheet" href="/css/style.css" type="text/css">
     <link rel="icon" type="img/png" href="/img/classic-car-and-dealer-logo-vector.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,13 +27,15 @@
             <li><a href="/admin/dashb.html" target="_self">Users</a></li>
             <li><a href="/admin/messages.html" target="_self">Messages</a></li>
             <li><button id="btn_logout" class="btn_logout">Log out</button></li>
+            <li><a href="" id="status"></a></li>
         </ul>
     </div>
 
     <div class="content-header-dash">
         <h2 id="tbl-header">Classic Cars Club Admin Dashboard </h2>
-        <h3 id="tbl-sheader">Registered Users</h3>
-    </div>
+        <h3 id="tbl-sheader">Clients Messages</h3>
+    </div><!---->
+
     <div class="tbl1-container">
         <table id="tbl-users">
             <thead>
@@ -53,20 +54,23 @@
 
             </tbody>
         </table>
+        <br>
+        <div id="btn-pagination">
+            <button id="btnPrevPage">Previous</button>
+            <span id="spanActualPage">Page 1</span>
+            <button id="btnNextPage">Next</button>
+        </div>
     </div>
-
-    <div>
-        <br><br><br><br><br><br><br><br><br><br>
-    </div>
-
-    
-    <footer class="footer-dash">
+    <br>
+    <footer class="header-dash">
         <p>Copyrights - © 2024</p>
     </footer>
 </body>
 
+
 <!--Scripts JS-->
 <script src="/js/logout.js"></script>
-<script src="/js/loadusers.js"></script>
+<script src="/js/loadusers.js" type="module"></script>
+<script src="/js/status.js"></script>
 
 </html>

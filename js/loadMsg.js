@@ -1,52 +1,79 @@
+/**Autenticacion */
+
 const token = localStorage.getItem('token');
 console.log(token);
-if(!token){
+if (!token) {
     window.location.href = '/login.html';
 }
 
-fetch('http://localhost:3000/message')
-    .then(function (response) {
-        if (response.ok) {
-            return response.json();
-        }
-        throw new Error('Unsuccessful Response');
+const btnPrevPage = document.getElementById('btnPrevPage');
+const btnNextPage = document.getElementById('btnNextPage');
+const spanActualPage = document.getElementById('spanActualPage');
+let actualPage = 1;
+const pageSize = 4; // Tamaño de la página
 
-    }).then(function (data) {
-        const tableBody = document.querySelector('#tbl-pagination tbody');
-        const paginationDiv = document.getElementById('pagination');
-        let currentPage = 1;
-
-        console.log(data);
-        data.forEach(function (item) {
-            let row = tableBody.insertRow();
-          //row.insertCell().textContent = item._id;
-            row.insertCell().textContent = item.name;
-            row.insertCell().textContent = item.email;
-            row.insertCell().textContent = item.phone;
-            //row.insertCell().textContent = item.imagefile;
-            row.insertCell().textContent = item.message;
-
-        });
-
-        displayPagination(data.length);
-
-        function displayPagination(totalItems) {
-            const totalPages = Math.ceil(totalItems / 10); // Assuming 10 items per page
-            paginationDiv.innerHTML = '';
-            for (let i = 1; i <= totalPages; i++) {
-                const button = document.createElement('button');
-                button.textContent = i;
-                if (i === currentPage) {
-                    button.classList.add('active');
-                }
-                button.addEventListener('click', () => {
-                    currentPage = i;
-                    fetchData(currentPage);
-                });
-                paginationDiv.appendChild(button);
+function loadData(page) {
+    fetch(`http://localhost:3000/message?page=${page}&pageSize=${pageSize}`)
+        .then(function (response) {
+            if (response.ok) {
+                return response.json();
             }
-        }
+            throw new Error('Unsuccessful Response');
+        }).then(function (data) {
+            let tableBody = document.querySelector('#tbl-message tbody');
+            console.log(data);
+            // Limpiar la tabla antes de agregar los nuevos datos
+            tableBody.innerHTML = '';
+            data.forEach(function (item) {
+                let row = tableBody.insertRow();
+                row.insertCell().textContent = item.name;
+                row.insertCell().textContent = item.email;
+                row.insertCell().textContent = item.phone;
+                row.insertCell().textContent = item.message;
 
-    }).catch(function (error) {
-        console.log(error);
-    })
+                let linkCellDelete = row.insertCell();
+                let linkDelete = document.createElement('button');
+                linkDelete.addEventListener('click', () => {
+                    let id = item.id;
+                    /*window.location.href = '/admin/messages.html?id=' + item._id;*/
+                    const URL = 'http://localhost:3000/message/' + id;
+                    fetch(URL, {
+                        method: 'DELETE',
+                        headers: {
+                            'content-type': 'application/json',
+                            'Authorization': 'Bearer' + token
+                        }
+                    }).then(response => {
+                        if (!response.ok) {
+                            throw new Error('Unsuccessfully Response')
+                        }
+                        // Optionally, you can reload the data after successful deletion
+                        loadData(actualPage);
+                    }).catch(error => {
+                        console.error('Error deleting data:', error);
+                    });
+
+                })
+                linkDelete.textContent = 'Delete'
+                linkCellDelete.appendChild(linkDelete);
+
+            });
+            spanActualPage.textContent = `Page ${actualPage}`;
+        }).catch(function (error) {
+            console.error('Error al cargar datos:', error);
+        });
+}
+
+btnPrevPage.addEventListener('click', () => {
+    if (actualPage > 1) {
+        actualPage--;
+        loadData(actualPage);
+    }
+});
+
+btnNextPage.addEventListener('click', () => {
+    actualPage++;
+    loadData(actualPage);
+});
+
+loadData(actualPage);

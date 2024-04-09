@@ -3,6 +3,11 @@ const emailInput = document.querySelector('#email');
 const passwordInput = document.querySelector('#password');
 const contedorError = document.querySelector('#error-container');
 
+const token = localStorage.getItem('token');
+console.log(token);
+if (token) {
+    window.location.href = '/admin/dashb.html';
+}
 
 form.addEventListener('submit', async e => {
     e.preventDefault();
@@ -12,7 +17,7 @@ form.addEventListener('submit', async e => {
         method: 'POST',
         headers: {
             'content-type': 'application/json',
-            //'Authorization': 'Bearer ' + token
+            'Authorization': 'Bearer ' + token
         },
         body: JSON.stringify({ email, password })
     }).then(response => {

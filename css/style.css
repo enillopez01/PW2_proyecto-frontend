@@ -632,7 +632,7 @@ button {
     text-align: center;
 }
 
-.header-dash ul.li{
+.header-dash ul.li {
     display: flex;
 }
 
@@ -677,6 +677,22 @@ button {
     padding: 20px;
 }
 
+.tbl1-container div
+ {
+    padding-left: 650px;
+}
+
+.tbl1-container div button {
+    height: 50px;
+    width: 150px;
+    cursor: pointer;
+}
+
+.tbl1-container div span {
+    text-align: center;
+    font-weight: 600;
+}
+
 /* Estilo Tabla*/
 
 #tbl-header {
@@ -695,14 +711,6 @@ button {
     line-height: 1.7em;
     margin-bottom: 10px;
     text-align: center;
-}
-
-#tbl-container {
-    display: block;
-    width: 850px;
-    background: #fff;
-    margin: 0 auto;
-    padding: 10px 17px;
 }
 
 #tbl-users {
@@ -763,6 +771,7 @@ button {
     text-align: center;
     width: auto;
     padding: 10px;
+    position: absolute;
 }
 
 .btn_logout {
@@ -823,59 +832,86 @@ button {
 
 }
 
-.button-container {
+.form3-users div button {
     display: flex;
-    margin: 15px;
+    flex: 1;
+    padding: 0px 15 15px 0px;
+    flex-direction: row;
     cursor: pointer;
-    border: unset;
     font-weight: bolder;
-    margin-top: 20px;
-    margin-bottom: 20px;
     width: 160px;
     height: 60px;
 }
 
-.data-container {
+
+
+#tbl2-container{
     padding-left: 300px;
-    padding-top: 20px;
-    padding-right: 150px;
+}
+
+#tbl2-container div button {
+    height: 50px;
+    width: 150px;
+    cursor: pointer;
+}
+
+#tbl2-container div span {
+    text-align: center;
+    font-weight: 600;
+}
+
+
+#btn-pagination{
+    padding-left: 550px;
+}
+
+#tbl-message {
+    border-collapse: collapse;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    width: 95%;
 
 }
 
-.pagination-container {
-    padding-left: 300px;
-    padding-top: 20px;
-    padding-right: 150px;
+#tbl-message thead {
+    cursor: pointer;
+    background: #c9dff0;
 }
 
-.tbl-pagination {
-    padding: 0 auto;
-    font-size: medium;
+#tbl-message thead tr th {
+    font-weight: bold;
+    padding: 12px 30px;
+    padding-left: 42px;
 }
 
-.tbl-2 {
-    padding-left: 300px;
-    padding-top: 20px;
-    padding-right: 150px;
+#tbl-message th span {
+    padding-right: 20px;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
 }
 
-.tbl-pagina {
-    width: 80%;
-
+#tbl-message thead tr th.headerSortUp,
+#keywords thead tr th.headerSortDown {
+    background: #acc8dd;
 }
 
-.tbl-pagina td,
-th {
-    padding: 0.4rem !important;
-
+#tbl-message thead tr th.headerSortUp span {
+    background-image: url('https://i.imgur.com/SP99ZPJ.png');
 }
 
-/*
-.tbl-pagina tbody tr td.lalign {
-    text-align: left;
+#tbl-message thead tr th.headerSortDown span {
+    background-image: url('https://i.imgur.com/RkA9MBo.png');
 }
 
-.tbl-pagina tbody tr td {
+#tbl-message tbody tr {
+    color: #555;
+}
+
+#tbl-message tbody tr td {
     text-align: center;
     padding: 15px 10px;
-}*/
+}
+
+#tbl-message tbody tr td.lalign {
+    text-align: left;
+}

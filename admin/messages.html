@@ -9,17 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Messages Clients</title>
     <link rel="stylesheet" href="/css/style.css" type="text/css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
-    
     <link rel="icon" type="img/png" href="/img/classic-car-and-dealer-logo-vector.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-
-
 </head>
 
 <body class="body-dash">
@@ -33,66 +27,48 @@
             <li><a href="/admin/dashb.html" target="_self">Users</a></li>
             <li><a href="/admin/messages.html" target="_self">Messages</a></li>
             <li><button id="btn_logout" class="btn_logout">Log out</button></li>
+            <li><a href="" id="status"></a></li>
         </ul>
     </div>
 
     <div class="content-header-dash">
-        <h2>Classic Cars Club Admin Dashboard </h2>
-        <h3>Clients Messages</h3>
-        <div id="data-container">
-            <table id="tbl-pagination" class="table table-striped table-bordered">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Phone</th>
-                        <th>Message</th>
-                    </tr>
-                </thead>
-                <tbody id="tablebody">
-                  
-                </tbody>
-            </table>
-            <br><br>
-        </div>
-
+        <h2 id="tbl-header">Classic Cars Club Admin Dashboard </h2>
+        <h3 id="tbl-sheader">Clients Messages</h3>
     </div><!---->
 
-   
+    <div id="tbl2-container">
+        <table id="tbl-message">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Message</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
 
-    <footer class="footer-dash">
+            </tbody>
+        </table>
+        <br>
+        <div id="btn-pagination">
+            <button id="btnPrevPage">Previous</button>
+            <span id="spanActualPage">Page 1</span>
+            <button id="btnNextPage">Next</button>
+        </div>
+        <br>
+    </div>
+    <br>
+    <footer class="header-dash">
         <p>Copyrights - © 2024</p>
     </footer>
 </body>
 
 
 <!--Scripts JS-->
-<!-- JQUERY -->
-<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous">
-    </script>
-<!-- DATATABLES -->
-<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js">
-</script>
-<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js">
-</script>
-
 <script src="/js/logout.js"></script>
 <script src="/js/loadMsg.js" type="module"></script>
-<script type="module">$(document).ready(function () {
-    $('#tbl-pagination').DataTable({
-        language: {
-              paginate: {
-              
-            },
-            aria: {
-                sortAscending: ": active para ordenar la columna en orden ascendente",
-                sortDescending: ": active para ordenar la columna en orden descendente"
-            }
-        },
-        scrollY: 400,
-        lengthMenu: [ [5,10, 15, -1], [5, 10, 25, "All"] ],
-    });
-});</script>
+<script src="/js/status.js"></script>
 
 </html>

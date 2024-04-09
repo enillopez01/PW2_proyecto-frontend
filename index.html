@@ -36,6 +36,7 @@ Enil Enrique Lopez Cruz     2016-1007-0128
         <div class="rigth_col"></div>
     </header>
 
+
     <!--Boton para volver arriba-->
     <button onclick="topFunction()" id="btn_top" title="Go to top">Top</button>
 
@@ -46,16 +47,17 @@ Enil Enrique Lopez Cruz     2016-1007-0128
                 <a href="/index.html" target="_self">Classics Cars Club</a>
             </h1>
             <!-- Menu-->
-            <div class="menu" id="menu">
+            <nav class="menu" id="menu">
                 <a href="/index.html" target="_self">Home</a>
                 <a href="/who_we_are.html" target="_parent">Who We Are?</a>
                 <a href="/gallery.html" target="_parent">Gallery</a>
                 <a href="/contact_us.html" target="_parent">Contact Us</a>
-                <a href="/login.html" target="_parent" class="login">Log In</a>
+                <a href="/login.html" target="_parent" id="status" class="login"></a>
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                     <i class="fa fa-bars"></i></a>
-            </div><!--Fin Menu-->
+            </nav><!--Fin Menu-->
         </div>
+
         <!--Carrusel fotos-->
         <div class="slider_container">
             <div class="myslides">
@@ -163,7 +165,8 @@ Enil Enrique Lopez Cruz     2016-1007-0128
             </div>
 
             <div>
-                <img class="body_2-img" src="https://bramclassauto.com/wp-content/uploads/2023/05/pexels-laura-porter-8401396.jpg"
+                <img class="body_2-img"
+                    src="https://bramclassauto.com/wp-content/uploads/2023/05/pexels-laura-porter-8401396.jpg"
                     type="img/jpg" alt="gorgeous-cars-from-1960s">
             </div>
 
@@ -183,5 +186,6 @@ Enil Enrique Lopez Cruz     2016-1007-0128
 <script src="/js/img_slider.js"></script>
 <script src="/js/resp_menu.js"></script>
 <script src="/js/top_buttom.js"></script>
+<script src="/js/status.js"></script>
 
 </html>

@@ -1,13 +1,13 @@
 const URL = 'http://localhost:3000/signup';
 const form = document.querySelector('#signup-form');
 
-let nameInput = document.querySelector('#name');
-let surnameInput = document.querySelector('#surname');
-let genderInput = document.querySelector('#gender');
-let phoneInput = document.querySelector('#phone');
-let emailInput = document.querySelector('#email');
-let passwordInput = document.querySelector('#password');
-let contedorError = document.querySelector('#error-container');
+const nameInput = document.querySelector('#name');
+const surnameInput = document.querySelector('#surname');
+const genderInput = document.querySelector('#gender');
+const phoneInput = document.querySelector('#phone');
+const emailInput = document.querySelector('#email');
+const passwordInput = document.querySelector('#password');
+const contedorError = document.querySelector('#error-container');
 
 form.addEventListener('submit', async e => {
     e.preventDefault();

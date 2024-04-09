@@ -8,7 +8,7 @@ if (!token) {
     window.location.href = '/login.html';
 }
 
-const URL = 'http://localhost:3000/login/' + id;
+const URL = 'http://localhost:3000/user/' + id;
 const form = document.querySelector('#form3-users');
 const IdInput = document.querySelector('#ID');
 const nameInput = document.querySelector('#name');
@@ -48,7 +48,7 @@ if (mode === 'INS' || mode === 'UPD' || mode === 'DLT') {
             body: JSON.stringify({ name, surname, gender, phone, email })
         }).then(response => {
             if (!response.ok) {
-                throw new Error('La respuesta no fue correcta');
+                throw new Error('Unsuccessfully Response');
             }
             return response.json();
         }).then(data => {
